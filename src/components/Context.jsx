@@ -1,8 +1,8 @@
 import { createContext, useState, useEffect, useContext } from 'react'
 
-const QuoteData = createContext()
+export const QuoteData = createContext()
 
-export const QuoteDataWrapper = ({children}) => {
+ const QuoteDataWrapper = ({children}) => {
    const [ data, setData ] = useState()
 
 	useEffect(() => {
@@ -22,5 +22,5 @@ export const QuoteDataWrapper = ({children}) => {
    )
 
 }
-
+export default QuoteDataWrapper;
 export const useData = ()=>useContext(QuoteData)
